@@ -1,8 +1,8 @@
 const backgrounds = [
-  'images/bg1.jpg',
-  'images/bg2.jpg',
-  'images/bg3.jpg',
-  'images/bg4.jpg'
+  'Images/bg1.jpg',
+  'Images/bg2.jpg',
+  'Images/bg3.jpg',
+  'Images/bg4.jpg'
 ];
 
 const randomBg = backgrounds[Math.floor(Math.random() * backgrounds.length)];
