@@ -311,6 +311,53 @@ nav {
 }
 
 
+/* Event Page */
+.event-section {
+  max-width: 1000px;
+  margin: 60px auto;
+  padding: 40px 20px;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  border-radius: 10px;
+  font-family: 'Oswald', sans-serif;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
+
+.event-intro h1 {
+  color: #ffc107;
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.event-date {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #ffcc00;
+  margin-bottom: 20px;
+}
+
+.event-description {
+  font-size: 1.1rem;
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+
+.event-btn {
+  display: inline-block;
+  background-color: #b71c1c;
+  color: white;
+  padding: 12px 25px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.event-btn:hover {
+  background-color: #ff5722;
+}
+
+
 /* Footer */
 footer {
   background-color: #222;
