@@ -1,0 +1,322 @@
+/* Reset & Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  background-color: #f4f4f4;
+  color: #333;
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: background-image 0.5s ease-in-out;
+  position: relative;
+  z-index: 0;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4); /* Adjust the 0.4 for lighter/darker overlay */
+  z-index: -1;
+  pointer-events: none;
+}
+
+a {
+  text-decoration: none;
+  color: #c62828;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Navigation */
+header {
+  background-color: #b71c1c;
+  font-family: oswald, sans-serif;
+  color: white;
+  padding: 20px 0;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1100px;
+  margin: auto;
+  padding: 0 20px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.logo img {
+  height: 100px;
+  width: auto;
+}
+
+.logo:hover {
+  transform: scale(1.20);
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+   .nav-links li a:hover {
+      color: #ffc107;
+    }
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background: white;
+  transition: 0.3s;
+}
+
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    background-color: #b71c1c;
+    position: absolute;
+    top: 100px; /* Adjust if needed depending on logo height */
+    right: 0;
+    width: 100%;
+    gap: 15px;
+    padding: 20px 0;
+    z-index: 100;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-links li a {
+    color: white;
+    font-weight: bold;
+    padding: 10px;
+    text-align: center;
+    display: block;
+  }
+
+}
+
+/* Hero Section */
+.hero {
+  background: url('./Images/firefighting-banner2.png') center/cover no-repeat;
+  height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  position: relative;
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  font-family: 'Oswald', sans-serif;
+}
+
+.hero p {
+  font-size: 1.2rem;
+}
+
+/* About Us Section */
+.about-section {
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #ffffffc4;
+  border-radius: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 20px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.about-text {
+  flex: 1 1 300px;
+}
+
+.about-text h2 {
+  color: #b71c1c;
+  font-family: 'Oswald', sans-serif;
+  margin-bottom: 10px;
+}
+
+.about-text p {
+  margin-bottom: 15px;
+}
+
+.about-text a {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #b71c1c;
+  color: white;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.about-text a:hover {
+  background-color: #d32f2f;
+}
+
+.about-photo {
+  flex: 1 1 300px;
+  text-align: center;
+}
+
+.about-photo img {
+  max-width: 100%;
+  border-radius: 10px;
+}
+
+/* Fire Ban Status */
+.fire-ban-status {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #ffffffc5;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.fire-ban-status h2 {
+  color: #b71c1c;
+  margin-bottom: 10px;
+  font-family: 'Oswald', sans-serif;
+}
+
+.fire-ban-on {
+  color: #d32f2f;
+  font-weight: bold;
+}
+
+.fire-ban-off {
+  color: #388e3c;
+  font-weight: bold;
+}
+
+.last-updated {
+  font-size: 0.9rem;
+  color: #555;
+  margin-top: 5px;
+}
+
+.status-link {
+  margin-top: 15px;
+  display: inline-block;
+  color: #b71c1c;
+  font-weight: bold;
+}
+
+.status-link:hover {
+  text-decoration: underline;
+}
+
+/* Quick Links */
+.quick-links {
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 0 20px;
+  color: #f4f4f4;
+}
+
+.card-container {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card {
+    background-image: url('./Images/vecteezy_black-brick-wall-background_10972062_273/vecteezy_black-brick-wall-background_10972062.jpg');
+  background-size: cover;
+  background-blend-mode: multiply;
+  padding: 20px;
+  border-radius: 10px;
+  flex: 1 1 250px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+  text-align: center;
+  color: white;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 25px rgba(255, 208, 80, 0.486);
+}
+
+
+.card h3 {
+  margin-bottom: 10px;
+  font-family: 'Oswald', sans-serif;
+  color: #b71c1c;
+}
+.card-icon {
+  height: 60px;
+  margin-bottom: 10px;
+}
+
+
+/* Footer */
+footer {
+  background-color: #222;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+}
+
